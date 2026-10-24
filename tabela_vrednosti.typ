@@ -30,9 +30,3 @@
       (0, R, U_del, U_oj, ADC_vrednost)
     })
 )
-
-#table(
-  columns: (auto, auto, auto, auto, auto),
-  table.header([G#sub[KOŽA]], [R#sub[KOŽA]], [U#sub[D]], [U#sub[OJ]], [ADC]),
-  ..tabela.flatten().map((a) => [#a]),
-)
