@@ -3,7 +3,7 @@
 #show figure: set figure(supplement: "Slika")
 
 = BLOKOVNI DIAGRAM
-
+\
 #include "blokovni_diagram.typ"
 
 == Napetostni delilnik
