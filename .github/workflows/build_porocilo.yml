@@ -20,6 +20,11 @@ jobs:
       # 1. Prenos kode iz repozitorija
       - name: Checkout repository
         uses: actions/checkout@v4
+        
+      - name: Install ngspice
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ngspice
 
       # 2. Namestitev Typst okolja v delovni tok
       - name: Setup Typst
@@ -30,11 +35,13 @@ jobs:
       # 3. Prevajanje dokumenta (zamenjajte "document.typ" z vašo datoteko)
       - name: Run simulations and compile document
         run: |
-          build.sh
+          chmod +x build.sh
+          ./build.sh
 
       # 4. Shranjevanje prevedenega PDF-ja kot artefakt delovnega toka
       - name: Upload PDF artifact
-        uses: actions/artifacts@v4
+        uses: actions/upload-artifact@v4
         with:
           name: porocilo-pdf
-          path: Poročilo.pdf
+          path: ./Poročilo.pdf
+          if-no-files-found: error
