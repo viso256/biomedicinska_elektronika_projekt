@@ -18,21 +18,33 @@ $ U#sub[iz] = U#sub[ref DEL] * (R#sub[ref]) / (R#sub[koža] + R#sub[ref]) $
 
 $
                    A & = 1 + (R#sub[PZ]) / R \
-  R#sub[PZ] = R => A & = 1 + 1/1 = 2
+  R#sub[PZ] = R => A & = 1 + 1 = 2 \
+           U#sub[iz] & = U#sub[vh] * A = U#sub[vh] * 2
+$
+
+Nasičenje:
+$
+  U#sub[iz] = U#sub[nap] & = "5 V" =>\
+        U#sub[vh nas] & = (U#[nap]) / A = "5 V" / 2 = "2,5 V"
 $
 
 == AD pretvornik
 
 $
   12 "bitni" => "ADC"#sub[MAX] = 2^12 -1 = 4095 \
-  "ADC" = min(floor((U#sub[vh]) / (U#sub[REF]) * 2^12), 2^12 - 1)
+  "ADC" = min(floor((U#sub[vh]) / (U#sub[ref]) * 2^12), 2^12 - 1)
+$
+
+Nasičenje:
+$
+  U#sub[vh] = U#sub[ref] = "4,096 V"
 $
 
 == Napetostni sledilnik
 
 == Referenčna napetost
 
-$ U#sub[REF] = 4.096 V $
+$ U#sub[REF] = "4,096 V" $
 
 = Tabela napovedanih vrednosti
 
