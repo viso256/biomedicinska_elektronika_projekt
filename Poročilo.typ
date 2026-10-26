@@ -27,13 +27,17 @@ Odvisnost U#sub[iz] od R#sub[koža]:
 #image("simulacije/out/delilnik_graf.svg")
 
 == RC filter
-
-Frekvenčni odziv:
+Izračun mejne frekvence:
+$
+  f#sub[m] &= 1 / (2 #sym.pi R C) = 1 / (2 #sym.pi * #zi.kohm(100) * #zi.uF(0.10)) approx #zi.hertz(15.9)
+$
+Simulacija:
 #grid(
   columns:(auto, auto),
   image("simulacije/out/filter_graf_amplituda.svg"),
   image("simulacije/out/filter_graf_faza.svg"),
 )
+
 == Ojačevalnik
 
 Ojačenje:
