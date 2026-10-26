@@ -24,8 +24,8 @@ $
 
 Nasičenje:
 $
-  U#sub[iz] = U#sub[nap] & = "5 V" =>\
-        U#sub[vh nas] & = (U#[nap]) / A = "5 V" / 2 = "2,5 V"
+  U#sub[iz] = U#sub[nap] & = "5 V" => \
+           U#sub[vh nas] & = (U#[nap]) / A = "5 V" / 2 = "2,5 V"
 $
 
 == AD pretvornik
@@ -53,5 +53,10 @@ $ U#sub[REF] = "4,096 V" $
 #table(
   columns: (auto, auto, auto, auto, auto),
   table.header([G#sub[KOŽA]\[S\]], [R#sub[KOŽA]\[#sym.Omega\]], [U#sub[D]\[V\]], [U#sub[OJ]\[V\]], [ADC]),
-  ..tabela_vrednosti.tabela.flatten().map(a => [#a]),
+  ..tabela_vrednosti
+    .tabela
+    .map(row => {
+      ([#row.G], [#row.R], [#row.U_del], [#row.U_oj], [#row.ADC])
+    })
+    .flatten(),
 )
