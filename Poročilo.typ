@@ -11,7 +11,10 @@
 
 #show figure: set figure(supplement: "Slika")
 
-= Blokovni diagram
+#title[Projekt EDA (GSR Click) – Bločni diagram in tabela napovedi]
+
+
+= Bločni diagram
 \
 #include "blokovni_diagram.typ"
 
@@ -85,7 +88,7 @@ $ U#sub[ref] = zi.V(4.096) $ <uref>
 
 #table(
   columns: (auto, auto, auto, auto, auto),
-  table.header([G#sub[KOŽA]], [R#sub[KOŽA]], [U#sub[D]], [U#sub[OJ]], [ADC]),
+  table.header([G#sub[KOŽA]], [R#sub[KOŽA]], [U#sub[TP1] - delilnik], [U#sub[TP3] - ojačevalnik], [ADC]),
   ..tabela_vrednosti
     .tabela
     .map(row => {
