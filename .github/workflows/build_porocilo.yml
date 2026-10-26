@@ -1,0 +1,40 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # 1. Prenos kode iz repozitorija
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2. Namestitev Typst okolja v delovni tok
+      - name: Setup Typst
+        uses: typst-community/setup-typst@v5
+        with:
+          typst-version: 'latest' # Tukaj lahko zaklenete točno različico (npr. '0.11.0')
+
+      # 3. Prevajanje dokumenta (zamenjajte "document.typ" z vašo datoteko)
+      - name: Run simulations and compile document
+        run: |
+          build.sh
+
+      # 4. Shranjevanje prevedenega PDF-ja kot artefakt delovnega toka
+      - name: Upload PDF artifact
+        uses: actions/artifacts@v4
+        with:
+          name: porocilo-pdf
+          path: Poročilo.pdf
