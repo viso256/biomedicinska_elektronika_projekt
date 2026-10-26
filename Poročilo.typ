@@ -16,18 +16,21 @@
 
 == Napetostni delilnik
 
-$ U#sub[iz] = U#sub[ref DEL] * (R#sub[ref]) / (R#sub[koža] + R#sub[ref]) $
-
-=== Testna točka (TP1)
+Izhodna napetost:
+$ U#sub[iz] = U#sub[ref del] * (R#sub[ref]) / (R#sub[koža] + R#sub[ref]) $
 
 == RC filter
 
 == Ojačevalnik
 
+Ojačenje:
 $
-                   A & = 1 + (R#sub[PZ]) / R \
-  R#sub[PZ] = R => A & = 1 + 1 = 2 \
-           U#sub[iz] & = U#sub[vh] * A = U#sub[vh] * 2
+A & = 1 + (R#sub[PZ]) / R \
+R#sub[PZ] = R => A & = 1 + 1 = 2
+$
+Izhodna napetost:
+$
+  U#sub[iz] & = U#sub[vh] * A = U#sub[vh] * 2
 $
 
 Nasičenje:
@@ -38,9 +41,10 @@ $
 
 == AD pretvornik
 
+ADC vrednost:
 $
-  12 "bitni" => "ADC"#sub[MAX] = 2^12 -1 = 4095 \
-  "ADC" = min(floor((U#sub[vh]) / (U#sub[ref]) * 2^12), 2^12 - 1)
+  12 "bitni" => italic("ADC")#sub[MAX] = 2^12 -1 = 4095 \
+  italic("ADC") = min(floor((U#sub[vh]) / (U#sub[ref]) * 2^12), 2^12 - 1)
 $
 
 Nasičenje:
@@ -51,8 +55,8 @@ $
 == Napetostni sledilnik
 
 == Referenčna napetost
-
-$ U#sub[REF] = zi.V(4.096) $
+Referenčna napetost, definirana v podatkovnem listu:
+$ U#sub[ref] = zi.V(4.096) $
 
 = Tabela napovedanih vrednosti
 
