@@ -27,6 +27,6 @@
       let U_del = U_del.at(i)
       let U_oj = U_oj.at(i)
       let ADC_vrednost = ADC_vrednosti.at(i)
-      (G: 0, R: R, U_del: U_del, U_oj: U_oj, ADC: ADC_vrednost)
+      (G: G, R: R, U_del: U_del, U_oj: U_oj, ADC: ADC_vrednost)
     })
 )

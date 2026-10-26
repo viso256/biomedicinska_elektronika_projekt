@@ -1,3 +1,11 @@
+#import "@preview/zero:0.7.1": num, set-num, zi
+
+#set-num(decimal-separator: ",")
+
+#let to_kohm = ohm => zi.kohm(ohm / 1000)
+#let round_volts = (volts, prec) => [#num(volts, digits: prec, round: (precision: prec)) V]
+#let to_usiemens = siemens => [#num(siemens * 1000 * 1000, digits: 2) #sym.mu#[S]]
+
 #set heading(numbering: "1.1")
 
 #show figure: set figure(supplement: "Slika")
@@ -25,7 +33,7 @@ $
 Nasičenje:
 $
   U#sub[iz] = U#sub[nap] & = "5 V" => \
-           U#sub[vh nas] & = (U#[nap]) / A = "5 V" / 2 = "2,5 V"
+           U#sub[vh nas] & = (U#[nap]) / A = zi.V(5) / 2 = zi.V(2.5)
 $
 
 == AD pretvornik
@@ -37,14 +45,14 @@ $
 
 Nasičenje:
 $
-  U#sub[vh] = U#sub[ref] = "4,096 V"
+  U#sub[vh] = U#sub[ref] = zi.V(4.096)
 $
 
 == Napetostni sledilnik
 
 == Referenčna napetost
 
-$ U#sub[REF] = "4,096 V" $
+$ U#sub[REF] = zi.V(4.096) $
 
 = Tabela napovedanih vrednosti
 
@@ -52,11 +60,11 @@ $ U#sub[REF] = "4,096 V" $
 
 #table(
   columns: (auto, auto, auto, auto, auto),
-  table.header([G#sub[KOŽA]\[S\]], [R#sub[KOŽA]\[#sym.Omega\]], [U#sub[D]\[V\]], [U#sub[OJ]\[V\]], [ADC]),
+  table.header([G#sub[KOŽA]], [R#sub[KOŽA]], [U#sub[D]], [U#sub[OJ]], [ADC]),
   ..tabela_vrednosti
     .tabela
     .map(row => {
-      ([#row.G], [#row.R], [#row.U_del], [#row.U_oj], [#row.ADC])
+      (to_usiemens(row.G), to_kohm(row.R), round_volts(row.U_del, 3), round_volts(row.U_oj, 3), num(row.ADC))
     })
     .flatten(),
 )
