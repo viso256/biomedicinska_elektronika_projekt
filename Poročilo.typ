@@ -19,6 +19,9 @@
 Izhodna napetost:
 $ U#sub[iz] = U#sub[ref del] * (R#sub[ref]) / (R#sub[koža] + R#sub[ref]) $
 
+Simulacija:
+#image("simulacije/out/delilnik_graf.svg")
+
 == RC filter
 
 == Ojačevalnik
