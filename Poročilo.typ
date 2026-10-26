@@ -7,19 +7,20 @@
 #let to_usiemens = siemens => [#num(siemens * 1000 * 1000, digits: 2) #sym.mu#[S]]
 
 #set heading(numbering: "1.1")
+#set math.equation(numbering: "(1)", supplement: [])
 
 #show figure: set figure(supplement: "Slika")
 
-= BLOKOVNI DIAGRAM
+= Blokovni diagram
 \
 #include "blokovni_diagram.typ"
 
 == Napetostni delilnik
 
-Izhodna napetost:
-$ U#sub[iz] = U#sub[ref del] * (R#sub[ref]) / (R#sub[koža] + R#sub[ref]) $
+Enačba za izhodno napetost delilnika:
+$ U#sub[iz] = U#sub[ref del] * (R#sub[ref]) / (R#sub[koža] + R#sub[ref]) $ <divider>
 
-Simulacija:
+Odvisnost U#sub[iz] od R#sub[koža]:
 #image("simulacije/out/delilnik_graf.svg")
 
 == RC filter
@@ -28,21 +29,21 @@ Simulacija:
 
 Ojačenje:
 $
-A & = 1 + (R#sub[PZ]) / R \
-R#sub[PZ] = R => A & = 1 + 1 = 2
+                   A#sub[U] & = 1 + (R#sub[PZ]) / R \
+  R#sub[PZ] = R => A#sub[U] & = 1 + 1 = 2
 $
 Izhodna napetost:
 $
-  U#sub[iz] & = U#sub[vh] * A = U#sub[vh] * 2
-$
+  U#sub[iz] & = U#sub[vh] * A#sub[U] = U#sub[vh] * 2
+$ <opamp>
 
 Nasičenje:
 $
   U#sub[iz] = U#sub[nap] & = "5 V" => \
-           U#sub[vh nas] & = (U#[nap]) / A = zi.V(5) / 2 = zi.V(2.5)
+           U#sub[vh nas] & = (U#sub[nap]) / (A#sub[U]) = zi.V(5) / 2 = zi.V(2.5)
 $
 
-== AD pretvornik
+== A/D pretvornik
 
 ADC vrednost:
 $
@@ -50,16 +51,27 @@ $
   italic("ADC") = min(floor((U#sub[vh]) / (U#sub[ref]) * 2^12), 2^12 - 1)
 $
 
+Izračun vhodne napetosti:
+
+$
+  U#sub[vh] = italic("ADC") / (2^12) * U#sub[ref]
+$ <adc>
+
 Nasičenje:
 $
   U#sub[vh] = U#sub[ref] = zi.V(4.096)
 $
 
 == Napetostni sledilnik
+$
+  U#sub[iz] = U#sub[vh]
+$
 
 == Referenčna napetost
 Referenčna napetost, definirana v podatkovnem listu:
-$ U#sub[ref] = zi.V(4.096) $
+$ U#sub[ref] = zi.V(4.096) $ <uref>
+
+// #include "izracun_iz_adc.typ"
 
 = Tabela napovedanih vrednosti
 
