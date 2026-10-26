@@ -72,7 +72,7 @@ $ <adc>
 
 Nasičenje:
 $
-  U#sub[vh] = U#sub[ref] = zi.V(4.096)
+  U#sub[vh] >= U#sub[ref] = zi.V(4.096)
 $
 
 == Napetostni sledilnik
