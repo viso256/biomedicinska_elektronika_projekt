@@ -1,0 +1,33 @@
+RC filter s prikazom faznega kota
+
+* Definicija virov in elementov
+v1 1 0 dc 0 ac 1
+r1 1 2 100k
+c1 2 0 0.1u
+
+.control
+  destroy all
+
+  * Frekvencna analiza od 1Hz do 10kHz
+  ac dec 100 0.1 10k
+
+  * Pretvorba faze iz radianov v stopinje za lazje branje
+  * {180 / pi} je priblizno 57.2957
+  let faza_stopinje = vp(2) * 57.2957795
+
+  * Nastavitev barv
+  set color0 = white
+  set color1 = black
+  
+  set hcopydevtype = svg
+
+  * PRVI GRAF: Amplituda v dB
+  hardcopy out/filter_graf_amplituda.svg vdb(2) xlabel 'Frekvenca' ylabel 'Amplituda'
+
+  * DRUGI GRAF: Faza v stopinjah
+  hardcopy out/filter_graf_faza.svg faza_stopinje xlabel 'Frekvenca' ylabel 'Faza'
+
+  quit
+.endc
+
+.end

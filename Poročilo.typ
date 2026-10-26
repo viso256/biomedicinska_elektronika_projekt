@@ -25,6 +25,12 @@ Odvisnost U#sub[iz] od R#sub[koža]:
 
 == RC filter
 
+Frekvenčni odziv:
+#grid(
+  columns:(auto, auto),
+  image("simulacije/out/filter_graf_amplituda.svg"),
+  image("simulacije/out/filter_graf_faza.svg"),
+)
 == Ojačevalnik
 
 Ojačenje:
