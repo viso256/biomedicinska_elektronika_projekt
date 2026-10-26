@@ -12,7 +12,7 @@
 #let get_G_from_R = R => 1 / R
 #let delilnik = (U_ref_del, R_kože, R_ref) => U_ref_del * (R_kože / (R_kože + R_ref))
 #let ojacevalnik = U_in => calc.min(U_in * 2, U_oj_max)
-#let ADC = (U_ref, U_in) => calc.min(calc.floor((U_in / U_ref) * calc.pow(2, ADC_bits)), calc.pow(2, ADC_bits) - 1)
+#let ADC = (U_ref, U_in) => calc.min(calc.floor(U_in * (calc.pow(2, ADC_bits) / U_ref)), calc.pow(2, ADC_bits) - 1)
 
 #let G_k = R_test.map(R => get_G_from_R(R))
 #let U_del = R_test.map(R => delilnik(U_ref_del, R, R_ref))
