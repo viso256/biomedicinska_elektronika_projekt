@@ -3,6 +3,7 @@
 #set-num(decimal-separator: ",")
 
 #let to_kohm = ohm => zi.kohm(ohm / 1000)
+#let to_ua = amp => [#num(amp * (1000 * 1000), digits: 1, round: (precision: 1)) #sym.mu#[A]]
 #let round_volts = (volts, prec) => [#num(volts, digits: prec, round: (precision: prec)) V]
 #let to_usiemens = siemens => [#num(siemens * 1000 * 1000, digits: 2) #sym.mu#[S]]
 
@@ -95,6 +96,8 @@ $ U#sub[ref] = zi.V(4.096) $ <uref>
 
 = Meje nasičenja
 
+
+
 = Ločljivost
 
 $
@@ -115,6 +118,25 @@ $
   #[nizek G (N #sym.arrow 0)]: && frac(d G, d N) & = "1,2 nS" \
          "visok G (N = 4095)": && frac(d G, d N) & = "0,0105 nS"
 $
+
+= Največji tok skozi kožo
+
+$
+                   I & = (U#sub[CC]) / (R#sub[K] + R_4) \
+  R#sub[K] -> 0 => I & < (U#sub[CC]) / (R_4) = zi.uA(33)
+$
+
+#let calculate_skin_current = r_s => 3.3 / (r_s + 100000)
+
+#let skin_resistances = (0, 100000, 1000000)
+#let skin_currents = skin_resistances.map(calculate_skin_current)
+
+#table(
+  columns: (auto, auto),
+  table.header([R#sub[K]], [I]),
+  ..skin_resistances.map(to_kohm).zip(skin_currents.map(to_ua)).flatten(),
+  sym.infinity, [0],
+)
 
 = Tabela napovedanih vrednosti
 
