@@ -6,13 +6,20 @@
 #let to_ua = amp => [#num(amp * (1000 * 1000), digits: 1, round: (precision: 1)) #sym.mu#[A]]
 #let round_volts = (volts, prec) => [#num(volts, digits: prec, round: (precision: prec)) V]
 #let to_usiemens = siemens => [#num(siemens * 1000 * 1000, digits: 2) #sym.mu#[S]]
+#let follower_voltage = volt => if (volt > 3.9) {
+  "> 3,9 V"
+} else { round_volts(volt, 3) }
 
 #set heading(numbering: "1.1")
 // #set math.equation(numbering: "(1)", supplement: [])
 
 #show figure: set figure(supplement: "Slika")
 
-#title[Projekt EDA (GSR Click) – Bločni diagram in tabela napovedi]
+#align(center)[
+  #text(18pt, weight: "bold")[Projekt EDA (GSR Click) – Bločni diagram in tabela napovedi] \
+  #v(0.5em)
+  #text(12pt)[Neža Povh, Vid Sojer]
+]
 
 
 = Bločni diagram
@@ -30,6 +37,7 @@ $ U_1 = U#sub[ref del] * (R_4) / (R#sub[K] + R_4) $ <divider>
 
 Odvisnost U#sub[1] od R#sub[K]:
 #image("simulacije/out/delilnik_graf.svg")
+#pagebreak()
 
 == RC filter
 Izračun mejne frekvence:
@@ -179,6 +187,8 @@ $
   sym.infinity, [0],
 )
 
+#pagebreak()
+
 = Tabela napovedanih vrednosti
 
 #import "tabela_vrednosti.typ"
@@ -195,7 +205,7 @@ $
         round_volts(row.U_del, 3),
         round_volts(row.U_del, 3),
         round_volts(row.U_oj, 3),
-        round_volts(row.U_oj, 3),
+        follower_voltage(row.U_oj),
         "4,096 V",
         "3,3 V",
         "5,0 V",
