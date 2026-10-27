@@ -25,39 +25,41 @@
 == Napetostni delilnik
 
 Enačba za izhodno napetost delilnika:
-$ U#sub[iz] = U#sub[ref del] * (R#sub[ref]) / (R#sub[koža] + R#sub[ref]) $ <divider>
+$ U_1 = U#sub[ref del] * (R_4) / (R#sub[K] + R_4) $ <divider>
 
-Odvisnost U#sub[iz] od R#sub[koža]:
+Odvisnost U#sub[1] od R#sub[K]:
 #image("simulacije/out/delilnik_graf.svg")
 
 == RC filter
 Izračun mejne frekvence:
 $
-  f#sub[m] &= 1 / (2 #sym.pi R C) = 1 / (2 #sym.pi * #zi.kohm(100) * #zi.uF(0.10)) approx #zi.hertz(15.9)
+  f#sub[m] & = 1 / (2 #sym.pi R_2 C_6) = 1 / (2 #sym.pi * #zi.kohm(100) * #zi.uF(0.10)) approx #zi.hertz(15.9)
 $
-Simulacija:
-#grid(
-  columns:(auto, auto),
-  image("simulacije/out/filter_graf_amplituda.svg"),
-  image("simulacije/out/filter_graf_faza.svg"),
+#block(
+  breakable: false,
+  [Frekvenčni odziv filtra pro frekvencah 0,1 Hz do 10 kHz:
+    #grid(
+      columns: (auto, auto),
+      image("simulacije/out/filter_graf_amplituda.svg"), image("simulacije/out/filter_graf_faza.svg"),
+    )],
 )
 
 == Ojačevalnik
 
 Ojačenje:
 $
-                   A#sub[U] & = 1 + (R#sub[PZ]) / R \
-  R#sub[PZ] = R => A#sub[U] & = 1 + 1 = 2
+               A#sub[U] & = 1 + R_5 / R_3 \
+  R_5 = R_3 => A#sub[U] & = 1 + 1 = 2
 $
 Izhodna napetost:
 $
-  U#sub[iz] & = U#sub[vh] * A#sub[U] = U#sub[vh] * 2
+  U_3 & = U_2 * A#sub[U] = U_2 * 2
 $ <opamp>
 
 Nasičenje:
 $
-  U#sub[iz] = U#sub[nap] & = "5 V" => \
-           U#sub[vh nas] & = (U#sub[nap]) / (A#sub[U]) = zi.V(5) / 2 = zi.V(2.5)
+  U_3 = U#sub[nap] & = "5 V" => \
+      U#sub[3 nas] & = (U#sub[nap]) / (A#sub[U]) = zi.V(5) / 2 = zi.V(2.5)
 $
 
 == A/D pretvornik
@@ -65,23 +67,24 @@ $
 ADC vrednost:
 $
   12 "bitni" => italic("ADC")#sub[MAX] = 2^12 -1 = 4095 \
-  italic("ADC") = min(floor((U#sub[vh]) / (U#sub[ref]) * 2^12), 2^12 - 1)
+  italic("ADC") = min(floor((U_3) / (U#sub[ref]) * 2^12), 2^12 - 1)
 $
 
 Izračun vhodne napetosti:
 
 $
-  U#sub[vh] = italic("ADC") / (2^12) * U#sub[ref]
+  U_3 = italic("ADC") / (2^12) * U#sub[ref]
 $ <adc>
 
 Nasičenje:
 $
-  U#sub[vh] >= U#sub[ref] = zi.V(4.096)
+  U_3 >= U#sub[ref] = zi.V(4.096)
 $
 
 == Napetostni sledilnik
 $
-  U#sub[iz] = U#sub[vh]
+   A#sub[U] & = 1 \
+  U#sub[AN] & = U_3
 $
 
 == Referenčna napetost
