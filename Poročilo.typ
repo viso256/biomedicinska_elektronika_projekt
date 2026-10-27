@@ -8,7 +8,7 @@
 #let to_usiemens = siemens => [#num(siemens * 1000 * 1000, digits: 2) #sym.mu#[S]]
 
 #set heading(numbering: "1.1")
-#set math.equation(numbering: "(1)", supplement: [])
+// #set math.equation(numbering: "(1)", supplement: [])
 
 #show figure: set figure(supplement: "Slika")
 
@@ -96,7 +96,48 @@ $ U#sub[ref] = zi.V(4.096) $ <uref>
 
 = Meje nasičenja
 
+- Zgornja meja A/D:
+$
+  4095 quad (U_3 = 4,096 "V")
+$
 
+$
+  U_2 = frac(U_3, 2) = 2,048 "V" = U_1
+$
+$
+                U_1 & = U_"CC" frac(R_4, R_"K" + R_4) \
+  U_1 (R_"K" + R_4) & = U_"CC" R_4 \
+              R_"K" & = frac(U_"CC" R_4, U_1) - R_4
+                      = R_4 (frac(U_"CC", U_1) - 1) \
+$
+
+$
+  G_S = frac(1, R_"K") = 1,.4 "µS"
+  quad arrow.r quad N = 4095
+$
+
+- MCP607
+
+  $
+    U_"SS" - 0,3 "V" <= U_"IN" <= U_"DD" - 1,1 "V" \
+                        -0,3 "V" <= U_3 <= 3,9 "V" \
+                          U_1 = U_2 = frac(U_3, 2)
+                          quad arrow.r quad U_1    & <= 1,95 "V"
+  $
+  $
+    R_S & = 69,2 "kΩ" \
+      G & = 14,4 "µS" quad ("manj od A/D")
+  $
+
+- spodnja meja:
+$
+  N = 1 \
+  N = 4096 frac(u_3, U_"ref")
+  quad arrow.r quad
+  U_3 = frac(N * U_"ref", 4096) = 1 "mV" \ U_1 = 0,5 "mV" \
+  R_S = R_4 (frac(U_"CC", U_1) - 1) \
+  G = 1,5 "nS"
+$
 
 = Ločljivost
 
@@ -115,8 +156,8 @@ $
                  & = frac(x, R_4(x - N)^2)
 $
 $
-  #[nizek G (N #sym.arrow 0)]: && frac(d G, d N) & = "1,2 nS" \
-         "visok G (N = 4095)": && frac(d G, d N) & = "0,0105 nS"
+  #[nizek G (N #sym.arrow 0)]: quad && frac(d G, d N) & = "1,2 nS" \
+         "visok G (N = 4095)": quad && frac(d G, d N) & = "0,0105 nS"
 $
 
 = Največji tok skozi kožo
