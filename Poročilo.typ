@@ -18,6 +18,10 @@
 \
 #include "blokovni_diagram.typ"
 
+= Shema z označenimi testnimi točkami
+
+#image("dokumentacija/gsr-click-schematic-v100.svg")
+
 == Napetostni delilnik
 
 Enačba za izhodno napetost delilnika:
