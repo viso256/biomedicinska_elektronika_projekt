@@ -2,7 +2,7 @@
 
 #set-num(decimal-separator: ",")
 
-#let to_kohm = ohm => zi.kohm(ohm / 1000)
+#let to_kohm = ohm => if (ohm == calc.inf) { sym.infinity } else { zi.kohm(ohm / 1000) }
 #let to_ua = amp => [#num(amp * (1000 * 1000), digits: 1, round: (precision: 1)) #sym.mu#[A]]
 #let round_volts = (volts, prec) => [#num(volts, digits: prec, round: (precision: prec)) V]
 #let to_usiemens = siemens => [#num(siemens * 1000 * 1000, digits: 2) #sym.mu#[S]]
@@ -189,7 +189,19 @@ $
   ..tabela_vrednosti
     .tabela
     .map(row => {
-      (to_usiemens(row.G), to_kohm(row.R), round_volts(row.U_del, 3), round_volts(row.U_del, 3), round_volts(row.U_oj, 3), round_volts(row.U_oj, 3), "4,096 V", "3,3 V", "5,0 V", "0 V", num(row.ADC))
+      (
+        to_usiemens(row.G),
+        to_kohm(row.R),
+        round_volts(row.U_del, 3),
+        round_volts(row.U_del, 3),
+        round_volts(row.U_oj, 3),
+        round_volts(row.U_oj, 3),
+        "4,096 V",
+        "3,3 V",
+        "5,0 V",
+        "0 V",
+        num(row.ADC),
+      )
     })
     .flatten(),
 )
