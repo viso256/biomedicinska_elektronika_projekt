@@ -38,7 +38,7 @@ $
 $
 #block(
   breakable: false,
-  [Frekvenčni odziv filtra pro frekvencah 0,1 Hz do 10 kHz:
+  [Frekvenčni odziv filtra pri frekvencah 0,1 Hz do 10 kHz:
     #grid(
       columns: (auto, auto),
       image("simulacije/out/filter_graf_amplituda.svg"), image("simulacije/out/filter_graf_faza.svg"),
@@ -96,7 +96,7 @@ $ U#sub[ref] = zi.V(4.096) $ <uref>
 
 = Meje nasičenja
 
-- Zgornja meja A/D:
+- Zgornja meja A/D pretvornika:
 $
   4095 quad (U_3 = 4,096 "V")
 $
@@ -112,7 +112,7 @@ $
 $
 
 $
-  G_S = frac(1, R_"K") = 1,.4 "µS"
+  G_S = frac(1, R_"K") = 1,4 "µS"
   quad arrow.r quad N = 4095
 $
 
@@ -129,7 +129,7 @@ $
       G & = 14,4 "µS" quad ("manj od A/D")
   $
 
-- spodnja meja:
+- Spodnja meja A/D pretvornika:
 $
   N = 1 \
   N = 4096 frac(u_3, U_"ref")
