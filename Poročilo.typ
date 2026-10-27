@@ -184,12 +184,12 @@ $
 #import "tabela_vrednosti.typ"
 
 #table(
-  columns: (auto, auto, auto, auto, auto),
-  table.header([G#sub[KOŽA]], [R#sub[KOŽA]], [U#sub[TP1] - delilnik], [U#sub[TP3] - ojačevalnik], [N]),
+  columns: (auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto),
+  table.header([G#sub[K]], [R#sub[K]], ..range(1, 9).map(i => [TP#sub([#i])]), [N#sub[ADC]]),
   ..tabela_vrednosti
     .tabela
     .map(row => {
-      (to_usiemens(row.G), to_kohm(row.R), round_volts(row.U_del, 3), round_volts(row.U_oj, 3), num(row.ADC))
+      (to_usiemens(row.G), to_kohm(row.R), round_volts(row.U_del, 3), round_volts(row.U_del, 3), round_volts(row.U_oj, 3), round_volts(row.U_oj, 3), "4,096 V", "3,3 V", "5,0 V", "0 V", num(row.ADC))
     })
     .flatten(),
 )
