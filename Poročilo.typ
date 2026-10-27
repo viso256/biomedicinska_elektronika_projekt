@@ -64,17 +64,17 @@ $
 
 == A/D pretvornik
 
-ADC vrednost:
+N vrednost:
 $
-  12 "bitni" => italic("ADC")#sub[MAX] = 2^12 -1 = 4095 \
-  italic("ADC") = min(floor((U_3) / (U#sub[ref]) * 2^12), 2^12 - 1)
+  12 "bitni" => italic("N")#sub[MAX] = 2^12 -1 = 4095 \
+  italic("N") = min(floor((U_3) / (U#sub[ref]) * 2^12), 2^12 - 1)
 $
 
 Izračun vhodne napetosti:
 
 $
-  U_3 = italic("ADC") / (2^12) * U#sub[ref]
-$ <adc>
+  U_3 = italic("N") / (2^12) * U#sub[ref]
+$ <N>
 
 Nasičenje:
 $
@@ -91,7 +91,30 @@ $
 Referenčna napetost, definirana v podatkovnem listu:
 $ U#sub[ref] = zi.V(4.096) $ <uref>
 
-// #include "izracun_iz_adc.typ"
+// #include "izracun_iz_N.typ"
+
+= Meje nasičenja
+
+= Ločljivost
+
+$
+                  N & = x frac(R_4 G, 1 + R_4 G) \
+       N(1 + R_4 G) & = x R_4 G \
+        N + N R_4 G & = x R_4 G \
+  N R_4 G - x R_4 G & = -N \
+   G(N R_4 - x R_4) & = -N \
+                  G & = frac(N, R_4(x - N))
+$
+
+$
+  frac(d G, d N) & = frac(R_4(x - N) - N(-R_4), (R_4(x - N))^2) \
+                 & = frac(R_4 x - N R_4 + N R_4, R_4^2(x - N)^2) \
+                 & = frac(x, R_4(x - N)^2)
+$
+$
+  #[nizek G (N #sym.arrow 0)]: && frac(d G, d N) & = "1,2 nS" \
+         "visok G (N = 4095)": && frac(d G, d N) & = "0,0105 nS"
+$
 
 = Tabela napovedanih vrednosti
 
@@ -99,7 +122,7 @@ $ U#sub[ref] = zi.V(4.096) $ <uref>
 
 #table(
   columns: (auto, auto, auto, auto, auto),
-  table.header([G#sub[KOŽA]], [R#sub[KOŽA]], [U#sub[TP1] - delilnik], [U#sub[TP3] - ojačevalnik], [ADC]),
+  table.header([G#sub[KOŽA]], [R#sub[KOŽA]], [U#sub[TP1] - delilnik], [U#sub[TP3] - ojačevalnik], [N]),
   ..tabela_vrednosti
     .tabela
     .map(row => {
