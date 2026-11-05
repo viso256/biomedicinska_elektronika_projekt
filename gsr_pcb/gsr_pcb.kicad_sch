@@ -4360,7 +4360,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical"
 			(at 57.15 100.33 0)
 			(hide yes)
 			(show_name no)
@@ -4439,7 +4439,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 109.22 118.618 90)
 			(hide yes)
 			(show_name no)
@@ -4518,7 +4518,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 173.99 94.488 90)
 			(hide yes)
 			(show_name no)
@@ -4677,7 +4677,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 219.4052 73.66 0)
 			(hide yes)
 			(show_name no)
@@ -4759,7 +4759,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm"
 			(at 83.82 100.33 0)
 			(hide yes)
 			(show_name no)
@@ -4836,7 +4836,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical"
 			(at 124.46 102.87 0)
 			(hide yes)
 			(show_name no)
@@ -4916,7 +4916,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 66.04 102.108 90)
 			(hide yes)
 			(show_name no)
@@ -4998,7 +4998,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "footprints:SOIC8-N_MC_MCH"
 			(at 177.8 111.76 0)
 			(hide yes)
 			(show_name no)
@@ -5095,7 +5095,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 93.98 107.188 90)
 			(hide yes)
 			(show_name no)
@@ -5177,7 +5177,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 180.0352 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -5337,7 +5337,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 233.3752 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -5653,7 +5653,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 262.382 95.25 90)
 			(hide yes)
 			(show_name no)
@@ -5735,7 +5735,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 84.7852 77.47 0)
 			(hide yes)
 			(show_name no)
@@ -5817,7 +5817,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm"
 			(at 125.73 102.87 0)
 			(hide yes)
 			(show_name no)
@@ -5974,7 +5974,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 55.372 125.73 90)
 			(hide yes)
 			(show_name no)
@@ -6056,7 +6056,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm"
 			(at 250.19 95.25 0)
 			(hide yes)
 			(show_name no)
@@ -6211,7 +6211,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical"
 			(at 82.55 100.33 0)
 			(hide yes)
 			(show_name no)
@@ -6369,7 +6369,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "footprints:SOIC8-N_MC_MCH"
 			(at 109.22 102.87 0)
 			(hide yes)
 			(show_name no)
@@ -6553,7 +6553,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm"
 			(at 232.41 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -6788,7 +6788,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 74.6252 115.57 0)
 			(hide yes)
 			(show_name no)
@@ -6870,7 +6870,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm"
 			(at 58.42 100.33 0)
 			(hide yes)
 			(show_name no)
@@ -7354,7 +7354,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical"
 			(at 209.55 100.33 0)
 			(hide yes)
 			(show_name no)
@@ -7454,7 +7454,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm"
 			(at 191.77 95.25 0)
 			(hide yes)
 			(show_name no)
@@ -7609,7 +7609,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_2x02_P2.54mm_Vertical"
 			(at 50.8 82.55 0)
 			(hide yes)
 			(show_name no)
@@ -8239,7 +8239,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_2x02_P2.54mm_Vertical"
 			(at 50.8 114.3 0)
 			(hide yes)
 			(show_name no)
@@ -8480,7 +8480,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "footprints:SOIC8-N_MC_MCH"
 			(at 138.43 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -8662,7 +8662,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SJ-43514-SMT_CUD"
+		(property "Footprint" "footprints_audiojack:SJ-43514-SMT_CUD"
 			(at 44.45 100.33 0)
 			(hide yes)
 			(show_name no)
@@ -8752,7 +8752,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm"
 			(at 191.77 110.49 0)
 			(hide yes)
 			(show_name no)
@@ -8830,7 +8830,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 169.8752 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -8909,7 +8909,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical"
 			(at 224.79 100.33 0)
 			(hide yes)
 			(show_name no)
@@ -9163,7 +9163,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "footprints:SOIC8-N_MC_MCH"
 			(at 135.89 77.47 0)
 			(hide yes)
 			(show_name no)
@@ -9347,7 +9347,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 37.592 125.73 90)
 			(hide yes)
 			(show_name no)
@@ -9586,7 +9586,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm"
 			(at 167.64 77.47 0)
 			(hide yes)
 			(show_name no)
