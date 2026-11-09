@@ -4383,7 +4383,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "0207714b-9cd4-49e7-8405-a1713bc5a0d2")
 		(property "Reference" "JP1"
 			(at 57.15 97.79 0)
@@ -4406,7 +4406,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
 			(at 57.15 100.33 0)
 			(hide yes)
 			(show_name no)
@@ -4859,7 +4859,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "1d5a5eb1-9e1b-4407-bfa2-a276baf278f5")
 		(property "Reference" "JP3"
 			(at 124.46 100.33 0)
@@ -4882,7 +4882,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
 			(at 124.46 102.87 0)
 			(hide yes)
 			(show_name no)
@@ -6234,7 +6234,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "4675666e-1711-4798-bec6-595f06b59bce")
 		(property "Reference" "JP2"
 			(at 82.55 97.79 0)
@@ -6257,7 +6257,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
 			(at 82.55 100.33 0)
 			(hide yes)
 			(show_name no)
@@ -7377,7 +7377,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "829e4517-5fce-4110-a3db-e3c6e393384e")
 		(property "Reference" "J1"
@@ -7632,7 +7632,7 @@
 		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "8b7072ca-f5d6-45a1-b7df-b8ce84e950a7")
 		(property "Reference" "JP4"
 			(at 50.8 80.01 0)
@@ -8183,7 +8183,7 @@
 		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "a6693304-40b2-4d97-8752-540f930f0bd5")
 		(property "Reference" "JP5"
@@ -8855,7 +8855,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "df124ed7-8098-460f-aa56-41693e778b94")
 		(property "Reference" "J2"
 			(at 225.552 88.138 0)
