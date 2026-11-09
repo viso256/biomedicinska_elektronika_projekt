@@ -3079,6 +3079,12 @@
 		(uuid "6835f6eb-e1e6-4122-a75b-eff3a4df2598")
 	)
 	(junction
+		(at 50.8 87.63)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6d252f69-64c6-4db1-839f-2adf45215903")
+	)
+	(junction
 		(at 196.85 110.49)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3227,6 +3233,16 @@
 			(type default)
 		)
 		(uuid "02885b36-ff00-48e3-a3bb-417e7839bb29")
+	)
+	(wire
+		(pts
+			(xy 72.39 82.55) (xy 72.39 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "06dcbd78-ed84-49fe-b65c-d8f14338877b")
 	)
 	(wire
 		(pts
@@ -3460,6 +3476,16 @@
 	)
 	(wire
 		(pts
+			(xy 50.8 87.63) (xy 64.77 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4306d734-e7e7-42e4-9d87-dba2b19b864a")
+	)
+	(wire
+		(pts
 			(xy 149.86 77.47) (xy 162.56 77.47)
 		)
 		(stroke
@@ -3667,6 +3693,16 @@
 			(type default)
 		)
 		(uuid "8b6492b1-3f14-4104-b6f8-b886c0adaaaa")
+	)
+	(wire
+		(pts
+			(xy 64.77 87.63) (xy 64.77 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8c657635-205c-4e92-af5c-b7dc3dfbbf03")
 	)
 	(wire
 		(pts
@@ -3997,6 +4033,16 @@
 			(type default)
 		)
 		(uuid "c9dabcb1-a8f6-41fe-9626-b53d07bb2ead")
+	)
+	(wire
+		(pts
+			(xy 64.77 82.55) (xy 72.39 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d48611f3-621e-47d9-a91a-fc71429f96e1")
 	)
 	(wire
 		(pts
@@ -4666,8 +4712,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "0.10uF"
-			(at 209.042 71.12 0)
+		(property "Value" "1uF"
+			(at 211.074 70.866 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5703,7 +5749,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 83.82 73.66 0)
+		(at 72.39 87.63 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5714,7 +5760,7 @@
 		(fields_autoplaced yes)
 		(uuid "3030e1b6-51de-4f7c-8d7b-8360945ef331")
 		(property "Reference" "C5"
-			(at 87.63 72.3899 0)
+			(at 76.2 86.3599 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5725,7 +5771,7 @@
 			)
 		)
 		(property "Value" "0.10uF"
-			(at 87.63 74.9299 0)
+			(at 76.2 88.8999 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5736,7 +5782,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 84.7852 77.47 0)
+			(at 73.3552 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5747,7 +5793,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 83.82 73.66 0)
+			(at 72.39 87.63 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5758,7 +5804,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 83.82 73.66 0)
+			(at 72.39 87.63 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6349,7 +6395,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "593d46ad-53ca-47b8-910d-7bea2746317c")
-		(property "Reference" "U4"
+		(property "Reference" "U3"
 			(at 109.22 92.71 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6513,7 +6559,7 @@
 		(instances
 			(project "gsr_pcb"
 				(path "/276949d0-a185-497a-8c5a-c0d8c7752a1d"
-					(reference "U4")
+					(reference "U3")
 					(unit 2)
 				)
 			)
@@ -6949,7 +6995,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
 			(at 264.16 105.41 0)
 			(hide yes)
 			(show_name no)
@@ -7609,7 +7655,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_2x02_P2.54mm_Vertical"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
 			(at 50.8 82.55 0)
 			(hide yes)
 			(show_name no)
@@ -7662,7 +7708,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 83.82 77.47 0)
+		(at 72.39 91.44 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7673,7 +7719,7 @@
 		(fields_autoplaced yes)
 		(uuid "8f9a5834-87d7-4e3e-a89d-cb299a3b30c5")
 		(property "Reference" "#PWR09"
-			(at 83.82 83.82 0)
+			(at 72.39 97.79 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7684,7 +7730,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 83.82 82.55 0)
+			(at 72.39 96.52 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7694,7 +7740,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 83.82 77.47 0)
+			(at 72.39 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7705,7 +7751,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 83.82 77.47 0)
+			(at 72.39 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7716,7 +7762,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 83.82 77.47 0)
+			(at 72.39 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7889,84 +7935,6 @@
 			(project "gsr_pcb"
 				(path "/276949d0-a185-497a-8c5a-c0d8c7752a1d"
 					(reference "#PWR06")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3V3")
-		(at 83.82 69.85 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9aba80d0-e46c-4272-ae2a-e5eaa929feb6")
-		(property "Reference" "#PWR012"
-			(at 83.82 73.66 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+3V3"
-			(at 83.82 64.77 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 83.82 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 83.82 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 83.82 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "dd50c741-0169-438f-9af9-182026e873d9")
-		)
-		(instances
-			(project "gsr_pcb"
-				(path "/276949d0-a185-497a-8c5a-c0d8c7752a1d"
-					(reference "#PWR012")
 					(unit 1)
 				)
 			)
@@ -8239,7 +8207,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_2x02_P2.54mm_Vertical"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
 			(at 50.8 114.3 0)
 			(hide yes)
 			(show_name no)
@@ -8458,7 +8426,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b89f2d51-8514-444b-801a-2abbced72e4f")
-		(property "Reference" "U4"
+		(property "Reference" "U3"
 			(at 137.16 49.5299 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8624,7 +8592,7 @@
 		(instances
 			(project "gsr_pcb"
 				(path "/276949d0-a185-497a-8c5a-c0d8c7752a1d"
-					(reference "U4")
+					(reference "U3")
 					(unit 3)
 				)
 			)
@@ -9143,7 +9111,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "e5ac270f-71f3-4b03-bf9b-2ab49bfec73b")
-		(property "Reference" "U4"
+		(property "Reference" "U3"
 			(at 135.89 87.63 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9307,7 +9275,7 @@
 		(instances
 			(project "gsr_pcb"
 				(path "/276949d0-a185-497a-8c5a-c0d8c7752a1d"
-					(reference "U4")
+					(reference "U3")
 					(unit 1)
 				)
 			)

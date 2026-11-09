@@ -2,4 +2,5 @@
 	(version 7)
 	(lib (name "footprints") (type "KiCad") (uri "${KIPRJMOD}/Footprints/ul_MCP607-I-SN/KiCADv6/footprints.pretty") (options "") (descr ""))
 	(lib (name "footprints_audiojack") (type "KiCad") (uri "${KIPRJMOD}/Footprints/SJ_43514_SMT_TR/KiCADv6/footprints.pretty") (options "") (descr ""))
+	(lib (name "MyLibrary") (type "KiCad") (uri "${KIPRJMOD}/Footprints/MyLibrary.pretty") (options "") (descr ""))
 )
