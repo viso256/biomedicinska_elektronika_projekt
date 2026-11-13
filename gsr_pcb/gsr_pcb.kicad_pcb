@@ -4027,7 +4027,7 @@
 				)
 			)
 		)
-		(property "Value" "1M"
+		(property "Value" "47k"
 			(at 0 1.43 90)
 			(layer "F.Fab")
 			(uuid "00bb712b-5e8f-4d01-aa5e-f61b9e722f5e")
@@ -4072,7 +4072,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C22935"
+		(property "LCSC" "C25819"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -6267,7 +6267,7 @@
 				)
 			)
 		)
-		(property "Value" "47k"
+		(property "Value" "100k"
 			(at 0 1.43 90)
 			(layer "F.Fab")
 			(uuid "22580d31-a6fc-4ca0-bdac-3b26049f0a89")
@@ -6312,7 +6312,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C25819"
+		(property "LCSC" "C25803"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")

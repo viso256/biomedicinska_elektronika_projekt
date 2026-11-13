@@ -6625,7 +6625,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "47k"
+		(property "Value" "100k"
 			(at 59.69 126.9999 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6669,7 +6669,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C25819"
+		(property "LCSC" "C25803"
 			(at 57.15 125.73 0)
 			(hide yes)
 			(show_name no)
@@ -10613,7 +10613,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1M"
+		(property "Value" "47k"
 			(at 41.91 126.9999 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10657,7 +10657,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C22935"
+		(property "LCSC" "C25819"
 			(at 39.37 125.73 0)
 			(hide yes)
 			(show_name no)
